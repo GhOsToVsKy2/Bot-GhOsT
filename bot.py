@@ -16,11 +16,11 @@ async def on_ready():
 async def on_message(message):
     contents = message.content.split(" ")
     chat_off = False
+    if chat_off == True:
+           await client.delete_message(message)
     if message.content == "$chat.off":
         await client.send_message(message.channel, "Chat wyłączony!")
-        if client.send_message(message.channel):
-            await client.delete_message(message)
-            chat_off = True
+        chat_off = True
     if message.content == "$cookie":
         await client.send_message(message.channel, ":cookie:")
     if message.content == "$python":
