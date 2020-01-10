@@ -50,5 +50,5 @@ async def on_message(message):
                      await client.send_message(message.channel, "Nie przeklinaj!")
                  except discord.errors.NotFound:
                       return
-client.run("NDQ5OTI2MDc4NDY3OTMyMTYw.Des8bA.u9thXhH1DkrpZpGQGOhr3GBQ18M")
+client.run(token)
 
